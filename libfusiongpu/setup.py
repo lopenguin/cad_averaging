@@ -8,9 +8,9 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-from distutils.core import setup
+# from distutils.core import 
+from setuptools import setup, Extension
 from Cython.Build import cythonize
-from distutils.extension import Extension
 from Cython.Distutils import build_ext
 import numpy as np
 import platform

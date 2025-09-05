@@ -25,11 +25,11 @@ if __name__ == "__main__":
     print("Testing script for averaging two cars")
 
     # Set shape coefficient
-    shape_coefficient = [1,0] # this is c
+    shape_coefficient = [0.5,0.5] # this is c
 
     # load off file
     suv_name = "aodi-Q7-SUV"
-    sedan_name = "aodi-a6"
+    sedan_name = "dazhong"
     depths_dir = "./examples/2_depth/"
     file_ext = ".off.h5"
 

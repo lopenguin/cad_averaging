@@ -20,7 +20,7 @@ If you use any of this code, please make sure to cite the original work:
 
 Note that all 3 libraries are included in this repo.
 
-**Update:** For newer CUDA versions/GPU architectures, the CMAKE file in `libfusiongpu` needs to be adapted as outlined in [this issue](https://github.com/davidstutz/mesh-fusion/issues/6).
+<!-- **Update:** For newer CUDA versions/GPU architectures, the CMAKE file in `libfusiongpu` needs to be adapted as outlined in [this issue](https://github.com/davidstutz/mesh-fusion/issues/6). -->
 
 ### Build and Install Package
 For building follow (illustrated for the CPU version):
@@ -103,6 +103,11 @@ For a more advanced example, the script [tsdf_morphing_animation.py](tsdf_morphi
 
     ffmpeg -r 30 -f image2 -i 'car_morphing_%4d.jpg' -vcodec libx264 -crf 25 -pix_fmt yuv420p car_morphing.mp4
 
+## Troubleshooting the install:
+1. Install the old numpy: `pip install "numpy<2.0"`
+2. Install glut: `sudo apt install freeglut3-dev`
+3. Install glew: `sudo apt-get install libglew-dev`
+4. Compile with gcc12: `cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_C_COMPILER=/usr/bin/gcc-12 .`
 
 ## Acknoweldgements
 The source code is heavily based on [mesh-fusion](https://github.com/davidstutz/mesh-fusion). Included below is their license statement.
